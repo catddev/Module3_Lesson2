@@ -207,10 +207,10 @@ start:
 		if (n >= 1000 && n <= 9999)
 		{
 			a = n % 100;
-			b = n - a * 100;
+			b = (n-a)/100;
 			x = a % 10;
-			y = b % 10;
-			if ((a == x * 10 + y) && (b == y * 10 + x))
+			y = (a-x)/10;
+			if ((a == y * 10 + x) && (b == x * 10 + y))
 				printf("\nпалиндром\n\n");
 			else
 				printf("\nне палиндром\n\n");
@@ -219,7 +219,6 @@ start:
 			printf("\nenter another number\n\n");
 	}
 	break;
-
 
 
 	goto start;
