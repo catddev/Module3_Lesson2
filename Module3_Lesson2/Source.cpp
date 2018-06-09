@@ -252,14 +252,102 @@ start:
 		if ((a > 0 && b < 0) || (a < 0 && b>0))
 			printf("\na=%d \nb=%d\n\n", -a, -b);
 		else
-			printf("a=0 \nb=0\n");
+			printf("a=0 \nb=0\n\n");
 	}
 	break;
 	case 12:
 	{
+		int c, r, d, sum;
+		printf("enter the city option number:\nAlmaty - 1 \tAstana - 2 \tShymkent - 3 \tKaraganda - 4\n\n");
+		scanf("%d", &c);
+		printf("enter route option:\none way - 1 \troundtrip - 2\n\n");
+		scanf("%d", &r);
+	start1:
+		switch (c)
+		{
+		case 1:
+		{
+			switch (r)
+			{
+			case 1:
+				sum = 500;
+			break;
+			case 2:
+				sum = 750;
+			break;
+			default:
+				printf("entered data is invalid, please check and try again\n\n");
+				goto start1;
+				break;
+			}
+		}
+		break;
+		case 2:
+		{
+			switch (r)
+			{
+			case 1:
+				sum = 400;
+			break;
+			case 2:
+				sum = 600;
+			break;
+			default:
+				printf("entered data is invalid, please check and try again\n\n");
+				goto start1;
+				break;
+			}
+		}
+		break;
+		case 3:
+		{
+			switch (r)
+			{
+			case 1:
+				sum = 350;
+			break;
+			case 2:
+				sum = 550;
+			break;
+			default:
+				printf("entered data is invalid, please check and try again\n\n");
+				goto start1;
+				break;
+			}
+		}
+		break;
+		case 4:
+		{
+			switch (r)
+			{
+			case 1:
+				sum = 600;
+			break;
+			case 2:
+				sum = 900;
+			break;
+			default:
+				printf("entered data is invalid, please check and try again\n\n");
+				goto start1;
+				break;
+			}
+		}
+		break;
+		default:
+			printf("entered data is invalid, please check and try again\n\n");
+			goto start1;
+			break;
+		}
 
-
-
+		printf("enter number of days from now till the flight:\n\n");
+		scanf("%d", &d);
+		if (d >= 45)
+			sum = sum*0.8;
+		else if (d > -20 && d < 45)
+			sum = sum*0.9;
+		else
+			sum = sum;
+		printf("\nyour tikets price:%d\n Thank you!\n\n", sum);
 
 	}
 	break;
