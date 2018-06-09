@@ -153,7 +153,7 @@ start:
 		printf("a=");
 		scanf("%d", &a);
 
-		if (p >= -99 && p <= 99);
+		if (p >-100 && p<-9 && p>9 && p <99);
 		{
 			p = abs(p);
 
@@ -200,7 +200,32 @@ start:
 	break;
 	case 10:
 	{
-		int n, a, b, x, y;
+		int n, x1, x2, x3, x4;
+		printf("\nenter 4-digit number:\t");
+		scanf("%d", &n);
+
+		if (n > 999 && n < 10000)
+		{
+			x1 = n % 10;
+			n = n / 10;
+			x2 = n % 10;
+			n = n / 10;
+			x3 = n % 10;
+			n = n / 10;
+			x4 = n % 10;
+			printf("%d\t\t %d\t\t %d\t\t %d\n", x1, x2, x3, x4);
+
+			if (x1 == x4 && x2 == x3)
+				printf("\nДа, палиндром\n");
+			else
+				printf("\nНет, не палиндром\n");
+
+		}
+		else
+			printf("\nThis is not 4-digit number. try again\n\n");
+ 
+
+	/*	int n, a, b, x, y;
 		printf("enter 4-digit number:\t");
 		scanf("%d", &n);
 
@@ -216,11 +241,28 @@ start:
 				printf("\nне палиндром\n\n");
 		}
 		else
-			printf("\nenter another number\n\n");
+			printf("\nenter another number\n\n");*/
 	}
 	break;
-
-
-	goto start;
+	case 11:
+	{
+		int a, b;
+		printf("\nenter 2 numbers:\n");
+		scanf("%d %d", &a, &b);
+		if ((a > 0 && b < 0) || (a < 0 && b>0))
+			printf("\na=%d \nb=%d\n\n", -a, -b);
+		else
+			printf("a=0 \nb=0\n");
 	}
+	break;
+	case 12:
+	{
+
+
+
+
+	}
+	break;
+	}
+	goto start;
 }
