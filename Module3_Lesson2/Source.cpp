@@ -258,11 +258,13 @@ start:
 	case 12:
 	{
 		int c, r, d, sum;
+	tryagain:
+
 		printf("enter the city option number:\nAlmaty - 1 \tAstana - 2 \tShymkent - 3 \tKaraganda - 4\n\n");
 		scanf("%d", &c);
 		printf("enter route option:\none way - 1 \troundtrip - 2\n\n");
 		scanf("%d", &r);
-	start1:
+
 		switch (c)
 		{
 		case 1:
@@ -277,8 +279,7 @@ start:
 			break;
 			default:
 				printf("entered data is invalid, please check and try again\n\n");
-				goto start1;
-				break;
+				goto tryagain;
 			}
 		}
 		break;
@@ -294,8 +295,7 @@ start:
 			break;
 			default:
 				printf("entered data is invalid, please check and try again\n\n");
-				goto start1;
-				break;
+				goto tryagain;
 			}
 		}
 		break;
@@ -311,8 +311,7 @@ start:
 			break;
 			default:
 				printf("entered data is invalid, please check and try again\n\n");
-				goto start1;
-				break;
+				goto tryagain;
 			}
 		}
 		break;
@@ -328,27 +327,26 @@ start:
 			break;
 			default:
 				printf("entered data is invalid, please check and try again\n\n");
-				goto start1;
-				break;
+				goto tryagain;
 			}
 		}
 		break;
 		default:
 			printf("entered data is invalid, please check and try again\n\n");
-			goto start1;
-			break;
+			goto tryagain;
 		}
 
 		printf("enter number of days from now till the flight:\n\n");
 		scanf("%d", &d);
 		if (d >= 45)
 			sum = sum*0.8;
-		else if (d > -20 && d < 45)
+		else if (d > 20 && d < 45)
 			sum = sum*0.9;
 		else
 			sum = sum;
-		printf("\nyour tikets price:%d\n Thank you!\n\n", sum);
-
+		SetConsoleTextAttribute(hConsole, 3);
+		printf("\nTOTAL:%d \nThank you!\n\n", sum);
+		SetConsoleTextAttribute(hConsole, 15);
 	}
 	break;
 	}
