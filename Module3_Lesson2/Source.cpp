@@ -349,6 +349,8 @@ start:
 		SetConsoleTextAttribute(hConsole, 15);
 	}
 	break;
+	default:
+		printf("\nerror: no tasks\n\n");
 	}
 	goto start;
 }
