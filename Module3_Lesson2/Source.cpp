@@ -1,4 +1,4 @@
-#include<stdio.h>
+п»ї#include<stdio.h>
 #include<stdlib.h>
 #include<locale.h>
 #include<math.h>
@@ -18,7 +18,6 @@ void main()
 	int tn = 0;
 
 start:
-
 	printf("task number:\t");
 	scanf("%d", &tn);
 
@@ -32,9 +31,9 @@ start:
 		printf("a=%d\t b=%d\n\n", a, b);
 
 		if ((pow(a, 2) - pow(b, 2)) > fabs(pow((a - b), 2)))
-			printf("Разность квадратов двух чисел больше модуля квадрата их разности\n\n");
+			printf("Р Р°Р·РЅРѕСЃС‚СЊ РєРІР°РґСЂР°С‚РѕРІ РґРІСѓС… С‡РёСЃРµР» Р±РѕР»СЊС€Рµ РјРѕРґСѓР»СЏ РєРІР°РґСЂР°С‚Р° РёС… СЂР°Р·РЅРѕСЃС‚Рё\n\n");
 		else
-			printf("бла-бла меньше или равны\n\n");
+			printf("Р±Р»Р°-Р±Р»Р° РјРµРЅСЊС€Рµ РёР»Рё СЂР°РІРЅС‹\n\n");
 		break;
 	}
 	case 2:
@@ -185,17 +184,17 @@ start:
 			switch (x)
 			{
 			case 1:
-				printf("%d копейка\n\n", a);
+				printf("%d РєРѕРїРµР№РєР°\n\n", a);
 				break;
 			case 2:
-				printf("%d копейки\n\n", a);
+				printf("%d РєРѕРїРµР№РєРё\n\n", a);
 				break;
 			case 3:
-				printf("%d копеек\n\n", a);
+				printf("%d РєРѕРїРµРµРє\n\n", a);
 			}
 		}
 		else
-			printf("отнимите рубли\n\n");
+			printf("РѕС‚РЅРёРјРёС‚Рµ СЂСѓР±Р»Рё\n\n");
 	}
 	break;
 	case 10:
@@ -216,9 +215,9 @@ start:
 			printf("%d\t\t %d\t\t %d\t\t %d\n", x1, x2, x3, x4);
 
 			if (x1 == x4 && x2 == x3)
-				printf("\nДа, палиндром\n");
+				printf("\nР”Р°, РїР°Р»РёРЅРґСЂРѕРј\n");
 			else
-				printf("\nНет, не палиндром\n");
+				printf("\nРќРµС‚, РЅРµ РїР°Р»РёРЅРґСЂРѕРј\n");
 
 		}
 		else
@@ -236,9 +235,9 @@ start:
 			x = a % 10;
 			y = (a-x)/10;
 			if ((a == y * 10 + x) && (b == x * 10 + y))
-				printf("\nпалиндром\n\n");
+				printf("\nРїР°Р»РёРЅРґСЂРѕРј\n\n");
 			else
-				printf("\nне палиндром\n\n");
+				printf("\nРЅРµ РїР°Р»РёРЅРґСЂРѕРј\n\n");
 		}
 		else
 			printf("\nenter another number\n\n");*/
